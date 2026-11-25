@@ -48,3 +48,23 @@ Swagger API 文档：http://127.0.0.1:8000/docs
 ## 自动化测试
 
 执行 `python -m pytest -v` 运行基础接口测试。
+
+## Docker Compose 部署
+
+1. 安装并启动 Docker Desktop。
+2. 将 `.env.example` 复制为 `.env`，配置数据库密码。
+3. 在项目根目录执行：
+
+```bash
+docker compose up -d --build
+```
+
+4. 访问 Swagger API 文档：http://127.0.0.1:8000/docs
+
+Docker Compose 自动完成 FastAPI、MySQL 和 Redis 服务的构建与启动，并通过 SQL 初始化脚本创建数据库表。MySQL 使用 Docker Volume 实现数据持久化。
+
+停止服务：
+
+```bash
+docker compose down
+```
