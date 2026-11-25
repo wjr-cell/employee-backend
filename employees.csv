@@ -1,0 +1,8 @@
+name,department,email
+Alice,IT,alice@example.com
+Bob,Finance,bob@example.com
+  Charlie  ,HR,charlie@example.com
+,IT,david@example.com
+David,,david@example.com
+Eve,IT,alice@example.com
+Frank,Sales,frank@example.com
